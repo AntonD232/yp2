@@ -22,11 +22,16 @@ public class VicController {
 
     @FXML
     void BtnOnAction(ActionEvent event) {
-int a=Integer.parseInt(chisTextField.getText().toString());
-double b= a/10;
-double с= a%10;
-des.setText("левая цифра: "+b);
-edin.setText("правая цифра: "+с);
+        int a = Integer.parseInt(chisTextField.getText().toString());
+        if ((a <= 99 && a >= 10) || (a>=-99 && a<=-10)) {
+            int b = a / 10;
+            int с = a % 10;
+            des.setText("левая цифра: " + b);
+            edin.setText("правая цифра: " + с);
+        } else {
+            des.setText("введите двухзначное число");
+            edin.setText("введите двухзначное число");
+        }
     }
 
 }

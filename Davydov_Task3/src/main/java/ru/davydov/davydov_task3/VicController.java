@@ -20,7 +20,7 @@ public class VicController {
     @FXML
     void BtnOnAction(ActionEvent event) {
 int a=Integer.parseInt(denTextField.getText().toString());
-int b= (a) % 7;
+int b= a % 7;
 if(1<=a&&a<=365)
 switch (b) {
     case 0:

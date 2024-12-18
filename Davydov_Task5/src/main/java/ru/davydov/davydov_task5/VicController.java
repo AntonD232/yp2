@@ -21,12 +21,13 @@ public class VicController {
     void BtnOnAction(ActionEvent event) {
         int God = Integer.parseInt(aTextField.getText().toString());
         int stoletie;
-        if (God % 100 == 0){
-            stoletie = God / 100;
-        }else {
-            stoletie = God / 100 + 1;
-        }
-        resultLabel.setText("Номер столетия: " + stoletie);
+            if (God % 100 == 0) {
+                stoletie = God / 100;
+            } else {
+                stoletie = God / 100 + 1;
+            }
+            resultLabel.setText("Номер столетия: " + stoletie);
+
     }
 
 }

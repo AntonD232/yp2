@@ -20,8 +20,11 @@ public class VicController {
     @FXML
     void BtnOnAction(ActionEvent event) {
 int a=Integer.parseInt(secTextField.getText().toString());
-int b= a %60;
-secLabel.setText("прошло секунд с последней минуты: "+b);
+if(a>=0 ) {
+    int b = a % 60;
+    secLabel.setText("прошло секунд с последней минуты: " + b);
+}
+else  secLabel.setText("время не может идти в минус( ");
     }
 
 }
